@@ -1,32 +1,47 @@
 <h1>{{ $modo }} empleado</h1>
-<div>
-    <label for="Nombre">Nombre</label>
-    <input type="text" name="Nombre" value="{{ isset($empleado->Nombre) ? $empleado->Nombre : '' }}" id="Nombre">
+
+@if(count($errors) > 0)
+    <div class="alert alert-danger" role="alert">
+        <ul>
+        @foreach($errors->all() as $error) 
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>    
+@endif
+
+<div class="form-group">
+    <div>
+        <label for="Nombre">Nombre</label>
+        <input class="form-control" type="text" name="Nombre" value="{{ isset($empleado->Nombre) ? $empleado->Nombre : '' }}" id="Nombre">
+    </div>
 </div>
 
-<div>
+<div class="form-group">
     <label for="ApellidoPaterno">Apellido Paterno</label>
-    <input type="text" name="ApellidoPaterno" value="{{ isset($empleado->ApellidoPaterno) ? $empleado->ApellidoPaterno : '' }}" id="ApellidoPaterno">
+    <input class="form-control" type="text" name="ApellidoPaterno" value="{{ isset($empleado->ApellidoPaterno) ? $empleado->ApellidoPaterno : '' }}" id="ApellidoPaterno">
 </div>
 
-<div>
+<div class="form-group">
     <label for="ApellidoMaterno">Apellido Materno</label>
-    <input type="text" name="ApellidoMaterno" value="{{ isset($empleado->ApellidoMaterno) ? $empleado->ApellidoMaterno : '' }}" id="ApellidoMaterno">
+    <input class="form-control" type="text" name="ApellidoMaterno" value="{{ isset($empleado->ApellidoMaterno) ? $empleado->ApellidoMaterno : '' }}" id="ApellidoMaterno">
 </div>
 
-<div>
+<div class="form-group">
     <label for="Correo">Correo</label>
-    <input type="text" name="Correo" value="{{ isset($empleado->Correo) ? $empleado->Correo : '' }}" id="Correo">
+    <input class="form-control" type="text" name="Correo" value="{{ isset($empleado->Correo) ? $empleado->Correo : '' }}" id="Correo">
 </div>
 
-<div>
+<div class="form-group">
     <label for="Foto">Foto</label>
+    <br>
     @if(isset($empleado->Foto))
-    <img src="{{ asset('storage').'/'.$empleado->Foto }}" width="120" alt="">
+    <img class="img-thumbnail img-fluid" src="{{ asset('storage').'/'.$empleado->Foto }}" width="120" alt="">
     @endif
-    <input type="file" name="Foto" id="Foto">
+    <input class="form-control" type="file" name="Foto" id="Foto">
 </div>
 
-<div>
-    <input type="submit" value="{{ $modo }} datos"> | <a href="{{ url('empleado') }}">Regresar</a>
+<div class="form-group">
+    <input class="btn btn-success" type="submit" value="{{ $modo }} datos"> | <a class="btn btn-primary" href="{{ url('empleado') }}">Regresar</a>
 </div>
+

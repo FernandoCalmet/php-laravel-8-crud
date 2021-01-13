@@ -45,7 +45,22 @@ class EmpleadoController extends Controller
         return response()->json($data);
         */
 
-        $data = request()->except('_token');
+        $campos = [
+            'Nombre' => 'required|string|max:50',
+            'ApellidoPaterno' => 'required|string|max:30',
+            'ApellidoMaterno' => 'required|string|max:30',
+            'Correo' => 'required|email',
+            'Foto' => 'required|max:10000|mimes:jpeg,png,jpg'
+        ];
+
+        $mensaje = [
+            'required' => 'El :attribute es requerido',
+            'Foto.required' => 'La foto es requerida'
+        ];
+
+        $this->validate($request, $campos, $mensaje);
+
+        $data = request()->except('_token'); //no mostrar token
 
         if($request->hasFile('Foto')){
             $data['Foto'] = $request->file('Foto')->store('uploads', 'public');
