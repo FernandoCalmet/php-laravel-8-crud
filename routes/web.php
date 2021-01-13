@@ -15,7 +15,8 @@ use App\Http\Controllers\EmpleadoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return view('auth.login');
 });
 
 /*
@@ -26,7 +27,17 @@ Route::get('/empleado', function () {
 Route::get('empleado/create', [EmpleadoController::class, 'create']);
 */
 
-Route::resource('empleado', 'EmpleadoController');
-Auth::routes();
+Route::resource('empleado', 'EmpleadoController')->middleware('auth');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes(); //todas las rutas disponibles
+/*
+Auth::routes(['register'=>false, 'reset'=>false]); //definir rutas que se van a ocultar
+*/
+
+//Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [EmpleadoController::class, 'index'])->name('home');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [EmpleadoController::class, 'index'])->name('home');
+});

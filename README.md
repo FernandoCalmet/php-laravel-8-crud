@@ -48,13 +48,18 @@ Integrar bootstrap y autenticación
 php artisan ui bootstrap --auth
 ```
 
+```note
+# Detener el servicio www :80 PID4
+net stop was /y
+```
+
 Procesar toda la aplicación
 
 ```bash
 npm install
 ```
 
-Ejecutar integración
+Ejecutar build de integración
 
 ```bash
 npm run dev
