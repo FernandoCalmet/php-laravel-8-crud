@@ -52,7 +52,9 @@ class EmpleadoController extends Controller
         }
 
         Empleado::insert($data);
-        return response()->json($data);
+
+        //return response()->json($data);
+        return redirect('empleado')->with('mensaje', 'Empleado agregado éxitosamente!');
     }
 
     /**
@@ -112,7 +114,12 @@ class EmpleadoController extends Controller
     public function destroy($id)
     {
         //
-        Empleado::destroy($id);
-        return redirect('empleado');
+        $empleado = Empleado::findOrFail($id);
+
+        if(Storage::delete('public/'.$empleado->Foto)){
+            Empleado::destroy($id);
+        }
+        
+        return redirect('empleado')->with('mensaje', 'Empleado eliminado éxitosamente!');;
     }
 }

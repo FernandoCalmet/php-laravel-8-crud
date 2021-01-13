@@ -27,3 +27,6 @@ Route::get('empleado/create', [EmpleadoController::class, 'create']);
 */
 
 Route::resource('empleado', 'EmpleadoController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

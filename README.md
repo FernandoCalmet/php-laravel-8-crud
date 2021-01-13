@@ -35,3 +35,27 @@ Abrir enlace para comunicarse con la carpeta de storage para imagenes
 ```bash
 php artisan storage:link
 ```
+
+Agregar dependencias para autenticación
+
+```bash
+composer require laravel/ui
+```
+
+Integrar bootstrap y autenticación
+
+```bash
+php artisan ui bootstrap --auth
+```
+
+Procesar toda la aplicación
+
+```bash
+npm install
+```
+
+Ejecutar integración
+
+```bash
+npm run dev
+```
