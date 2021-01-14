@@ -1,4 +1,4 @@
-# CRUD con Laravel 8
+# CRUD Utilizando Laravel 8 + MySQL + Bootstrap
 
 ## Comandos utilizados para el CRUD
 
@@ -32,6 +32,16 @@ npm install
 
 # Ejecutar build de integración
 npm run dev
+```
+
+## Comandos utilizados para los Charts
+
+```bash
+# Crear controlador
+php artisan make:controller ChartController
+
+# Usar seeder para poblar la tabla de usuarios
+php artisan db:seed
 ```
 
 ---

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\ChartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +20,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-/*
-Route::get('/empleado', function () {
-    return view('empleado.index');
-});
-
-Route::get('empleado/create', [EmpleadoController::class, 'create']);
-*/
-
+// Empleados
 Route::resource('empleado', 'EmpleadoController')->middleware('auth');
 
 Auth::routes(); //todas las rutas disponibles
@@ -35,9 +29,11 @@ Auth::routes(['register'=>false, 'reset'=>false]); //definir rutas que se van a 
 */
 
 //Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [EmpleadoController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [EmpleadoController::class, 'index'])->name('home');
 });
+
+// Charts
+Route::get('/highchart', [ChartController::class, 'index']);
