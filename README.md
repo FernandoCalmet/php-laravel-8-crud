@@ -44,6 +44,12 @@ php artisan make:controller ChartController
 php artisan db:seed
 ```
 
+### Charts libraries
+
+[HighCharts](https://code.highcharts.com/) Please feel free to link to the files from our CDN at code.highcharts.com. The files are hosted from Amazon CloudFront, which distributes them to edge locations all over the world for fast access and reliability. Please note we maintain a fair usage policy on bandwidth usage.
+
+[BarChart](https://cdnjs.com/libraries/Chart.js) Chart.JS Simple HTML5 charts using the canvas element.
+
 ---
 
 :octocat: [Check more about my repositories.](https://github.com/FernandoCalmet)

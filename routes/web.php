@@ -37,3 +37,4 @@ Route::group(['middleware' => 'auth'], function () {
 
 // Charts
 Route::get('/highchart', [ChartController::class, 'index']);
+Route::get('/barchart', [ChartController::class, 'barChart']);
