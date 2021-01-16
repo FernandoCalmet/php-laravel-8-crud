@@ -4,7 +4,7 @@
 
 ```bash
 # Crear proyecto
-composer createproject laravel/laravel sistemacrud
+composer create-project laravel/laravel laravel8crud
 
 # Migración de base de datos
 php artisan migrate
