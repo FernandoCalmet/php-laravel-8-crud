@@ -1,6 +1,42 @@
 # CRUD Utilizando Laravel 8 + MySQL + Bootstrap
 
-## Comandos utilizados para el CRUD
+[![Github][github-shield]][github-url]
+[![Kofi][kofi-shield]][kofi-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Khanakat][khanakat-shield]][khanakat-url]
+
+## 📓 TABLA DE CONTENIDO
+
+* [Acerca del proyecto](#acerca-del-proyecto)
+* [Características](#características)
+* [Instalación](#instalación)
+* [Dependencias](#dependencias)
+* [Licencia](#licencia)
+
+## 🔥 ACERCA DEL PROYECTO
+
+Este proyecto es una muestra de una solución base de `CRUD` utilizando `PHP Laravel 8 + Bootstrap + MySQL`.
+
+## ✔️ CARACTERÍSTICAS
+
+- [x] CRUD de usuarios
+- [x] Login
+
+## ⚙️ INSTALACIÓN
+
+Clonar el repositorio.
+
+```bash
+gh repo clone FernandoCalmet
+```
+
+Ejecutar aplicación.
+
+```bash
+dotnet run
+```
+
+### COMANDOS
 
 ```bash
 # Crear proyecto
@@ -44,14 +80,26 @@ php artisan make:controller ChartController
 php artisan db:seed
 ```
 
-### Charts libraries
+## 📥 DEPENDENCIAS
 
-[HighCharts](https://code.highcharts.com/) Please feel free to link to the files from our CDN at code.highcharts.com. The files are hosted from Amazon CloudFront, which distributes them to edge locations all over the world for fast access and reliability. Please note we maintain a fair usage policy on bandwidth usage.
+- [HighCharts](https://code.highcharts.com/) Siéntase libre de enlazar a los archivos de nuestro CDN en code.highcharts.com. Los archivos están alojados en Amazon CloudFront, que los distribuye a ubicaciones de borde en todo el mundo para un acceso rápido y confiable. Tenga en cuenta que mantenemos una política de uso justo en el uso del ancho de banda.
 
-[BarChart](https://cdnjs.com/libraries/Chart.js) Chart.JS Simple HTML5 charts using the canvas element.
+- [BarChart](https://cdnjs.com/libraries/Chart.js) Chart.JS Gráficos HTML5 simples usando el elemento canvas.
 
----
+## 📄 LICENCIA
 
-:octocat: [Check more about my repositories.](https://github.com/FernandoCalmet)
+Este proyecto está bajo la Licencia (Licencia MIT) - mire el archivo [LICENSE](LICENSE) para más detalles.
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T41JKMI)
+## ⭐️ DAME UNA ESTRELLA
+
+Si esta Implementación le resultó útil o la utilizó en sus Proyectos, déle una estrella. ¡Gracias! O, si te sientes realmente generoso, [¡Apoye el proyecto con una pequeña contribución!](https://ko-fi.com/fernandocalmet).
+
+<!--- reference style links --->
+[github-shield]: https://img.shields.io/badge/-@fernandocalmet-%23181717?style=flat-square&logo=github
+[github-url]: https://github.com/fernandocalmet
+[kofi-shield]: https://img.shields.io/badge/-@fernandocalmet-%231DA1F2?style=flat-square&logo=kofi&logoColor=ff5f5f
+[kofi-url]: https://ko-fi.com/fernandocalmet
+[linkedin-shield]: https://img.shields.io/badge/-fernandocalmet-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fernandocalmet
+[linkedin-url]: https://www.linkedin.com/in/fernandocalmet
+[khanakat-shield]: https://img.shields.io/badge/khanakat.com-brightgreen?style=flat-square
+[khanakat-url]: https://khanakat.com
