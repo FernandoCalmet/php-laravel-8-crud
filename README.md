@@ -27,7 +27,7 @@ Este proyecto es una muestra de una solución base de `CRUD` utilizando `PHP Lar
 Clonar el repositorio.
 
 ```bash
-gh repo clone FernandoCalmet
+gh repo clone FernandoCalmet/php-laravel-8-crud
 ```
 
 Ejecutar aplicación.
